@@ -3,7 +3,7 @@ services:
     runtime: python
     name: baqir2
     plan: free
-    branch: web
+    branch: main
     buildCommand: ./build.sh
     startCommand: python3 app.py & bash banen
     repo: https://github.com/banen-is-my-love/E_7_V.git
