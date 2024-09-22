@@ -45,7 +45,7 @@ _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
 OFFICIAL_UPSTREAM_REPO = "https://github.com/banen-is-my-love/E_7_V"
-ACTIVE_BRANCH_NAME = "web"
+ACTIVE_BRANCH_NAME = "main"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
 origin.fetch()
@@ -58,7 +58,7 @@ _run_cat_git() {
     $(_run_python_code 'from git import Repo
 import sys
 OFFICIAL_UPSTREAM_REPO="'$repolink'"
-ACTIVE_BRANCH_NAME = "'$UPSTREAM_REPO_BRANCH'" or "web"
+ACTIVE_BRANCH_NAME = "'$UPSTREAM_REPO_BRANCH'" or "main"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
 origin.fetch()
@@ -68,7 +68,7 @@ repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
 
 _set_bot () {
     local zippath
-    zippath="web.zip"
+    zippath="main.zip"
     echo "⌭ جاري تنزيل اكواد السورس ⌭"
     wget -q $(_get_ziplink) -O "$zippath"
     echo "⌭ تفريغ البيانات ⌭"
